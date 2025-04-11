@@ -1,2 +1,26 @@
+@font-face {
+  font-family: 'nasin-nanpa';
+  src: url('nasin-nanpa-5.0.0-beta.2.otf');
+}
+
+.sp {
+  font-family: 'nasin-nanpa';
+  font-size: 150%;
+}
+
 body {
+  background-color: #abcdef;
+}
+
+a {
+  text-decoration: none;
+  color: 
+}
+
+a:visited {
+  color 
+}
+
+a:hover {
+  color: blue;
 }
