@@ -5,22 +5,42 @@
 
 .sp {
   font-family: 'nasin-nanpa';
-  font-size: 150%;
+  font-size: 160%;
+}
+html {
+  background-color: #280031;
 }
 
 body {
-  background-color: #abcdef;
+  background-color: #81c79d;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  border: 3px solid black;
+  border-radius: 0.5em;
+  padding: 1em;
+
+}
+
+h1 {
+  margin-top: 0;
 }
 
 a {
   text-decoration: none;
-  color: 
 }
 
 a:visited {
-  color 
 }
 
 a:hover {
   color: blue;
+}
+
+details {
+  margin-top: 24px;
+}
+
+summary {
+  cursor: pointer;
 }
