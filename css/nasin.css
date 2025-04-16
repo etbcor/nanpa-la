@@ -10,6 +10,7 @@
 html {
   background-color: LightGreen;
   color: DarkGreen;
+  font-family: Sans-serif;
 }
 
 body {
@@ -18,8 +19,8 @@ body {
   margin-right: auto;
   max-width: 500px;
   border: 3px solid black;
-  border-radius: 0.5em;
-  padding: 1em;
+  border-radius: 5px;
+  padding: 22px;
 
 }
 
