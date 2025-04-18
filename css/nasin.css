@@ -7,9 +7,14 @@
   font-family: 'nasin-nanpa';
   font-size: 160%;
 }
+
+.sp-ala {
+  font-variant-ligatures: none;
+  font-size: 75%;
+}
+
 html {
   background-color: LightGreen;
-  color: DarkGreen;
   font-family: Sans-serif;
 }
 
