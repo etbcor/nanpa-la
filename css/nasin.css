@@ -64,12 +64,17 @@ details summary::before {
 }
 
 details:hover summary,
-details:hover summary::before
-{
+details:hover summary::before {
   color: #FF9B92;
 }
 
 details[open] summary::before {
   content: "o pini zz";
   font-family: 'nasin-nanpa';
+}
+
+
+table td {
+  vertical-align: top;
+  padding-bottom: 0.5em;
 }
