@@ -1,11 +1,26 @@
+:root {
+  --sp: "block";
+  --tp: "none";
+  --en: "none";
+}
+
 @font-face {
   font-family: 'nasin-nanpa';
   src: url('nasin-nanpa.otf');
 }
 
 .sp {
+  display: var(--sp);
   font-family: 'nasin-nanpa';
   font-size: 160%;
+}
+
+.tp {
+  display: var(--tp);
+}
+
+.en {
+  display: var(--en);
 }
 
 .sp-ala {
