@@ -11,19 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function oPonaELipu(toki) {
-    if (toki === "en") {
-      document.documentElement.style.setProperty("--sp", "none");
-      document.documentElement.style.setProperty("--tp", "none");
-      document.documentElement.style.setProperty("--en", "block");
-    } else if (toki === "tp") {
-      document.documentElement.style.setProperty("--sp", "none");
-      document.documentElement.style.setProperty("--tp", "block");
-      document.documentElement.style.setProperty("--en", "none");
-    } else { // sp
-      document.documentElement.style.setProperty("--sp", "block");
-      document.documentElement.style.setProperty("--tp", "none");
-      document.documentElement.style.setProperty("--en", "none");
-    }
+    const s = document.documentElement.style;
+    function o(a, b) { return a.includes(b) ? "inline-block" : "none"; }
+    s.setProperty("--sp", o(toki, "sp"));
+    s.setProperty("--tp", o(toki, "tp"));
+    s.setProperty("--en", o(toki, "en"));
   }
   
   let toki = oLukinEToki();
@@ -31,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toki = "sp";
     oAnteEToki(toki);
   }
+
   oPonaELipu(toki);
 
   const ijo = document.getElementById('ante-toki');

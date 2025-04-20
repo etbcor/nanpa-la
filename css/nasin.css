@@ -1,5 +1,5 @@
 :root {
-  --sp: "block";
+  --sp: "inline-block";
   --tp: "none";
   --en: "none";
 }
@@ -32,13 +32,17 @@ html {
   background-color: #209277;
   font-family: Sans-serif;
   color: #DBFFDB;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 body {
   background-color: #3B052D;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 500px;
+  max-width: fit-content;
   border: 3px solid white;
   border-radius: 5px;
   padding: 22px;
@@ -88,8 +92,23 @@ details[open] summary::before {
   font-family: 'nasin-nanpa';
 }
 
+table {
+  height: 100%;
+  table-layout: fixed;
+  padding-top: 22px;
+}
+
+table th {
+  width: 500px;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 1rem;
+ }
+
 
 table td {
+  width: 500px;
   vertical-align: top;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
+
