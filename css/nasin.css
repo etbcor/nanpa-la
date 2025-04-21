@@ -25,7 +25,7 @@
 
 .sp-ala {
   font-variant-ligatures: none;
-  font-size: 75%;
+  font-size: 65%;
 }
 
 html {
@@ -45,7 +45,8 @@ body {
   max-width: fit-content;
   border: 3px solid white;
   border-radius: 5px;
-  padding: 22px;
+  padding: 1rem;
+  padding-bottom: 0;
 
 }
 
@@ -99,16 +100,50 @@ table {
 }
 
 table th {
-  width: 500px;
-  font-size: 1.5em;
+  width: 420px;
+  font-size: 1.4em;
   font-weight: bold;
   padding-bottom: 1rem;
+  text-align: left;
  }
 
-
 table td {
-  width: 500px;
+  width: 420px;
   vertical-align: top;
-  padding-bottom: 1em;
+  border-top: 1px dashed #209277;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
+table th.tp,td.tp {
+  width: 360px;
+}
+
+table th.sp,td.sp {
+  width: 300px;
+}
+
+
+table td.sp {
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
+}
+
+details {
+  margin: 0;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 1rem;
+}
+
+.sp ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sp li:before {
+  content: ".";
+  font-family: 'nasin-nanpa';
+}

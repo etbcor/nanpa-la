@@ -33,5 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toki = this.value;
     oAnteEToki(toki);
     oPonaELipu(toki);
+    this.style.setProperty("font-family", (toki === "sp" || toki === "sp,tp") ? "nasin-nanpa" : "Sans-serif");
   });
+  ijo.style.setProperty("font-family", (toki === "sp" || toki === "sp,tp") ? "nasin-nanpa" : "Sans-serif");
 });
