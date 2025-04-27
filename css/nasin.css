@@ -67,7 +67,7 @@ body {
   border: 2px solid #798;
   border-radius: 16px;
   padding: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 h1 {
@@ -139,7 +139,6 @@ body table td {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   border-top: 3px solid;
-  border-cap: round;
 }
 
 body table td.sp {
@@ -174,6 +173,7 @@ details {
 
 ul {
   margin-top: 0;
+  margin-bottom: 0;
   padding-left: 1rem;
 }
 
