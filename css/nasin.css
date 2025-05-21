@@ -97,14 +97,14 @@ summary {
   color: #00FF84;
 }
 
-details summary::before {
+summary::before {
   content: "o open zz";
   font-family: 'nasin-nanpa';
   color: #00FF44;
 }
 
-details:hover summary,
-details:hover summary::before {
+summary:hover,
+summary:hover::before {
   color: #FF9B92;
 }
 
@@ -177,9 +177,17 @@ ul {
   padding-left: 1rem;
 }
 
+li {
+  margin-bottom: 0.5em;
+}
+
 .sp ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.sp li {
+  margin-bottom: 1em;
 }
 
 .sp li:before {
