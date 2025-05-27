@@ -9,19 +9,6 @@
   --en: "none";
 }
 
-#ante-toki {
-  width: 140px;
-  height: 24px;
-  padding: 0;
-  padding-top: 2px;
-  padding-left: 10px;
-  text-align: center;
-  border: 0;
-  border-radius: 10px;
-  background-color: #656;
-  color: #EFE;
-}
-
 .sp {
   display: var(--sp);
   font-family: 'nasin-nanpa';
@@ -36,17 +23,21 @@
   display: var(--en);
 }
 
+.nn {
+  font-family: 'nasin-nanpa';
+}
+
 .sp-ala {
   font-variant-ligatures: none;
   font-size: 65%;
 }
 
-.nn {
-  font-family: 'nasin-nanpa';
-}
-
 .ss {
   font-family: Sans-serif;
+}
+
+.teje {
+  float: right;
 }
 
 html {
@@ -68,6 +59,54 @@ body {
   border-radius: 16px;
   padding: 1rem;
   padding-bottom: 0.5rem;
+}
+
+#sewi {
+  height: 60px;
+  user-select: none;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+}
+
+#itan {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+#itan div {
+  float: left;
+  width: 42px;
+  height: 42px;
+  border: solid white 3px;
+  border-radius: 50%;
+  background-image: url("/ijo/itan-lili.png");
+}
+
+#ante-toki-selo {
+  padding: 12px;
+  padding-right: 0;
+  float: right;
+}
+
+#ante-toki-selo label {
+  font-size: 1.36rem;
+  margin-top: -0.2rem;
+  margin-left: 5px;
+  float: right;
+}
+
+#ante-toki {
+  width: 140px;
+  height: 24px;
+  padding: 0;
+  padding-top: 2px;
+  padding-left: 10px;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  background-color: #656;
+  color: #EFE;
 }
 
 h1 {
@@ -120,7 +159,7 @@ details[open] summary::before {
 body table {
   height: 100%;
   table-layout: fixed;
-  padding-top: 22px;
+  padding-top: 10px;
 }
 
 body table th {
@@ -138,21 +177,21 @@ body table td {
   vertical-align: top;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-top: 3px solid;
+  border-top: 1px solid;
 }
 
 body table td.sp {
   padding-top: 0.5rem;
   padding-bottom: 0.1rem;
-  border-image: linear-gradient(to bottom right, #20F277 0%, transparent 30%) 100% 1;
+  border-image: linear-gradient(to right, #20F277 0%, transparent 50%) 100% 1;
 }
 
 body table td.tp {
-  border-image: linear-gradient(to bottom right, #207792 0%, transparent 30%) 100% 1;
+  border-image: linear-gradient(to right, #207792 0%, transparent 50%) 100% 1;
 }
 
 body table td.en {
-  border-image: linear-gradient(to bottom right, #779220 0%, transparent 30%) 100% 1;
+  border-image: linear-gradient(to right, #779220 0%, transparent 50%) 100% 1;
 }
 
 body table th.sp,td.sp {
@@ -193,8 +232,4 @@ li {
 .sp li:before {
   content: ".";
   font-family: 'nasin-nanpa';
-}
-
-.teje {
-  float: right;
 }
