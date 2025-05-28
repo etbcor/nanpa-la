@@ -1,36 +1,75 @@
-function panaSona(nimi, sona) {
+// o awen e sona lon poki ilo pi jan lukin
+function tawaPoki(nimi, sona) {
   document.cookie = `${nimi}=${sona}; domain=.nanpa.la; path=/`;
 }
 
-function kamaSona(nimi) {
+// o alasa e sona lon poki ilo pi jan lukin
+function tanPoki(nimi) {
   return document.cookie.split("; ").find((row) => row.startsWith(`${nimi}=`))?.split("=")[1];
 }
 
-function oAnteLukin(toki) {
-  const s = document.documentElement.style;
-  function o(a, b) { return a.includes(b) ? "inline-block" : "none"; }
-  s.setProperty("--sp", o(toki, "sp"));
-  s.setProperty("--tp", o(toki, "tp"));
-  s.setProperty("--en", o(toki, "en"));
+// o alasa e sona lon nasin pi lipu ilo
+function tanNasin(nimi) {
+
+  // ijo
+  const ilo = new URLSearchParams(window.location.search);
+  const sona = ilo.get(nimi);
+
+  // pali
+  window.history.pushState({}, document.title, window.location.pathname);
+  return sona;
 }
 
-function openLa() {
-  let toki = kamaSona("toki");
-  if (!toki) {
-    toki = "sp";
-    panaSona("toki", toki);
-  }
-  oAnteLukin(toki);
+// o ante e nasin CSS
+function oAnteLukin(toki) {
 
-  const ijo = document.getElementById('ante-toki');
-  ijo.style.setProperty("font-family", (toki === "sp" || toki === "sp,tp") ? "nasin-nanpa" : "Sans-serif");
-  ijo.addEventListener('change', function() {
-    const toki = this.value;
-    panaSona("toki", toki);
+  // ijo
+  const ilo = document.getElementById('ante-toki');
+  const s = document.documentElement.style;
+  const o = (nWan, nTu) => { return nWan.includes(nTu) ? "inline-block" : "none"; }
+
+  // pali
+  s.setProperty("--ala", toki.includes("a") ? "flex" : "none")
+  s.setProperty("--sp", o(toki, "s"));
+  s.setProperty("--tp", o(toki, "t"));
+  s.setProperty("--en", o(toki, "e"));
+  ilo.style.setProperty("font-family", (toki.includes("a") || toki.includes("s") && !toki.includes("e")) ? "nasin-nanpa" : "Sans-serif");
+}
+
+// lipu li open la o ni
+function openLa() {
+
+  // ijo
+  const ilo = document.getElementById('ante-toki');
+  const nasin = tanNasin("t");
+  const poki = tanPoki("t");
+  let toki = "a";
+
+  // pali
+
+  // ilo pi ante toki li ante la..
+  ilo.addEventListener('change', function() {
+    // ..o awen e toki sin
+    toki = this.value;
+    // ..lon poki kin
+    tawaPoki("t", toki);
+    // o ante lukin
     oAnteLukin(toki);
-    this.style.setProperty("font-family", (toki === "sp" || toki === "sp,tp") ? "nasin-nanpa" : "Sans-serif");
   });
 
+  if (nasin) {
+    toki = nasin.split('').sort().join('');
+    tawaPoki("t", toki);
+    ilo.value = toki;
+
+  } else if (poki) {
+    toki = poki;
+    ilo.value = toki;
+
+  } else {
+    tawaPoki("t", toki);
+  }
+  oAnteLukin(toki);
 }
 
 document.addEventListener('DOMContentLoaded', openLa);
