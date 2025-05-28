@@ -40,15 +40,15 @@ html {
 }
 
 body {
-  background-color: #323;
+  width: fit-content;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
   border: 2px solid #798;
   border-radius: 16px;
   padding: 1rem;
   padding-bottom: 0.5rem;
+  background-color: #323;
 }
 
 footer {
@@ -76,7 +76,7 @@ a:hover {
 }
 
 details {
-  margin-top: 24px;
+  margin: 0;
 }
 
 summary {
@@ -176,7 +176,7 @@ body table {
 }
 
 body table th {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: left;
   padding-bottom: 1rem;
@@ -184,6 +184,7 @@ body table th {
 
 body table th .teje {
   text-decoration: underline;
+  margin-right: 10px;
 }
 
 body table td {
@@ -252,10 +253,6 @@ body table th.en,td.en {
 
 .teje {
   float: right;
-}
-
-details {
-  margin: 0;
 }
 
 ul {
