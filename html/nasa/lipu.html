@@ -1,28 +1,18 @@
 <!--# include file="/ijo/head.html" -->
 <body>
-  <script>
-    function nasa() {
-      const ken = [
-        "leko",
-      ];
-      location.href = ken[Math.floor(Math.random() * ken.length)];
-    }
-  </script>
+  <!--# include file="/ijo/ante-toki-ala.html" -->
 
-  <div id="sewi">
-    <a id="itan" href="https://nanpa.la/">
-      <div></div>
-    </a>
-    <div class="nn teje" style="padding: 16px">
-      taso la o lukin e nasa zz ale li pona
-    </div>
-  </div>
-
-  <div class="nn" onclick="nasa()" style="
-    font-size: 250px;
-    height: 280px;
-    overflow: hidden;
-    cursor: pointer;
-  ">o</div>
+  <div
+    tabindex="1"
+    onclick="nasa()"
+    style="
+      cursor: pointer;
+      font-family: 'nasin-nanpa';
+      font-size: 250px;
+      height: 280px;
+      overflow: hidden;
+      color: #0F4;
+      animation: 10s linear 0s infinite kule;
+    ">o</div>
 
 </body>

@@ -42,7 +42,7 @@ function oAnteLukin(toki) {
   if (toki.includes("a")) {
     anpa.parentElement.style.setProperty("display", "none");
   } else if (toki.includes("e")) {
-    anpa.innerHTML = "Link to this page w/these languages";
+    anpa.innerHTML = "Link to this page with these language settings";
     anpa.style.setProperty("font-family", "inherit");
     anpa.parentElement.style.setProperty("display", "inherit");
   } else if (toki.includes("t")) {
