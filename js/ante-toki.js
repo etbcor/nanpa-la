@@ -25,15 +25,35 @@ function oAnteLukin(toki) {
 
   // ijo
   const ilo = document.getElementById('ante-toki');
+  const anpa = document.getElementById('anpa');
   const s = document.documentElement.style;
   const o = (nWan, nTu) => { return nWan.includes(nTu) ? "inline-block" : "none"; }
+  const poka = window.location.host.split('.')[0];
+  const lipu = window.location.pathname;
 
   // pali
+  ilo.style.setProperty("font-family", (toki.includes("a") || toki.includes("s") && !toki.includes("e")) ? "nasin-nanpa" : "Sans-serif");
   s.setProperty("--ala", toki.includes("a") ? "flex" : "none")
   s.setProperty("--sp", o(toki, "s"));
   s.setProperty("--tp", o(toki, "t"));
   s.setProperty("--en", o(toki, "e"));
-  ilo.style.setProperty("font-family", (toki.includes("a") || toki.includes("s") && !toki.includes("e")) ? "nasin-nanpa" : "Sans-serif");
+  anpa.setAttribute("href", `https://${poka}.nanpa.la${lipu}?t=${toki}`);
+
+  if (toki.includes("a")) {
+    anpa.parentElement.style.setProperty("display", "none");
+  } else if (toki.includes("e")) {
+    anpa.innerHTML = "Link to this page w/these languages";
+    anpa.style.setProperty("font-family", "inherit");
+    anpa.parentElement.style.setProperty("display", "inherit");
+  } else if (toki.includes("t")) {
+    anpa.innerHTML = "nasin tawa lipu ni pi toki ni";
+    anpa.style.setProperty("font-family", "inherit");
+    anpa.parentElement.style.setProperty("display", "inherit");
+  } else {
+    anpa.innerHTML = "nasin tawa lipu&ni^ pi(tokini^)";
+    anpa.style.setProperty("font-family", "nasin-nanpa");
+    anpa.parentElement.style.setProperty("display", "inherit");
+  }
 }
 
 // lipu li open la o ni
@@ -41,6 +61,7 @@ function openLa() {
 
   // ijo
   const ilo = document.getElementById('ante-toki');
+  const anpa = document.getElementById('anpa');
   const nasin = tanNasin("t");
   const poki = tanPoki("t");
   let toki = "a";

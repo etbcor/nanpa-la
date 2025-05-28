@@ -117,7 +117,7 @@ body {
   }
   to {
     transform: translateY(-32px);
-    color: #00FF44;
+    color: #0F4;
   }
 }
 
@@ -133,13 +133,20 @@ body {
   animation: 2s ease-in 3s infinite alternate tawa;
 }
 
+footer {
+  text-align: center;
+  border-top: 2px solid;
+  padding-top: 8px;
+  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+}
+
 h1 {
   margin-top: 0;
 }
 
 a {
   text-decoration: none;
-  color: #00FF44;
+  color: #0F4;
 }
 
 a:visited {
@@ -163,7 +170,7 @@ summary {
 summary::before {
   content: "o open zz";
   font-family: 'nasin-nanpa';
-  color: #00FF44;
+  color: #0F4;
 }
 
 summary:hover,
@@ -257,3 +264,12 @@ li {
   content: ".";
   font-family: 'nasin-nanpa';
 }
+
+#anpa {
+  color: #00FF84;
+}
+
+#anpa:hover {
+  color: #FF9B92;
+}
+
