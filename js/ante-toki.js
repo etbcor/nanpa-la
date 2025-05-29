@@ -28,7 +28,8 @@ function oAnteLukin(toki) {
   const anpa = document.getElementById('anpa');
   const s = document.documentElement.style;
   const o = (nWan, nTu) => { return nWan.includes(nTu) ? "inline-block" : "none"; }
-  const poka = window.location.host.split('.')[0];
+  const open = window.location.host.split('.')[0];
+  const poka = open === "ijo" ? "" : `${open}.`;
   const lipu = window.location.pathname;
 
   // pali
@@ -37,7 +38,7 @@ function oAnteLukin(toki) {
   s.setProperty("--sp", o(toki, "s"));
   s.setProperty("--tp", o(toki, "t"));
   s.setProperty("--en", o(toki, "e"));
-  anpa.setAttribute("href", `https://${poka}.nanpa.la${lipu}?t=${toki}`);
+  anpa.setAttribute("href", `https://${poka}nanpa.la${lipu}?t=${toki}`);
 
   if (toki.includes("a")) {
     anpa.parentElement.style.setProperty("display", "none");

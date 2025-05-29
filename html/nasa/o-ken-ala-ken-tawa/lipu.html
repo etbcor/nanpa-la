@@ -1,0 +1,51 @@
+<!--# include file="/ijo/head-lili.html" -->
+<body>
+  <style>
+    html { background-color: #354; }
+    body > div {
+      margin: auto;
+      margin-top: 25px;
+      width: fit-content;
+      border: 10px black solid;
+      border-radius: 50px;
+      background-color: #AF9;
+    }
+    body > div > div {
+      margin: 25px;
+      width: 100px;
+      height: 100px;
+      border: 10px black solid;
+      border-radius: 25px;
+    }
+    #wan { background-color: #F00; }
+    #tu { background-color: #FF0; }
+    #tuwan { background-color: #0F0; }
+  </style>
+
+  <script src="/ijo/nasa.js"></script>
+  <script>
+  let nanpaTawa = 0;
+  function o(nimi) {
+    const ijo = document.getElementById(nimi);
+    const suli = ijo.style.scale ? ijo.style.scale : 1;
+    const suliSin = suli > 0.2 ? suli * 0.5 : 0;
+    const nanpa = (Math.random() * screen.height) / 4;
+
+    ijo.style.scale = suliSin;
+    ijo.style.marginTop = `${nanpa}px`;
+    if (suliSin == 0) {
+      ijo.style.marginTop = `0px`;
+      nanpaTawa++;
+    }
+    if (nanpaTawa > 2) {
+      nasa();
+    }
+  }
+  </script>
+
+  <div id="selo">
+    <div id="wan" onclick="o('wan')"></div>
+    <div id="tu" onclick="o('tu')"></div>
+    <div id="tuwan" onclick="o('tuwan')"></div>
+  </div>
+</body>

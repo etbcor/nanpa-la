@@ -23,6 +23,15 @@
   }
 }
 
+@keyframes sike {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   --ala: "flex";
   --sp: "none";
@@ -56,6 +65,80 @@ footer {
   border-top: 2px solid;
   padding-top: 8px;
   border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+}
+
+.sewi {
+  height: 60px;
+  user-select: none;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+}
+
+#itan {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+#itan div {
+  float: left;
+  width: 42px;
+  height: 42px;
+  border: solid white 3px;
+  border-radius: 50%;
+  background-image: url("/ijo/itan-lili.png");
+}
+
+#ante-toki-selo {
+  padding: 12px;
+  padding-right: 0;
+  float: right;
+}
+
+#ante-toki-selo label {
+  font-size: 1.36rem;
+  margin-top: -0.2rem;
+  margin-left: 5px;
+  float: right;
+  animation: 60s ease-in-out 17s infinite sike;
+}
+
+#ante-toki {
+  width: 100px;
+  height: 24px;
+  padding: 0;
+  padding-top: 2px;
+  padding-left: 10px;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  background-color: #656;
+  color: #EFE;
+}
+
+#ala {
+  margin-top: 8px;
+  font-family: 'nasin-nanpa';
+  font-size: 32px;
+  display: var(--ala);
+}
+
+#tawa {
+  display: inline-block;
+  animation: 2s ease-in 3s infinite alternate tawa;
+}
+
+#kule {
+  color: #0F4;
+  animation: 10s linear 0s infinite kule;
+}
+
+#anpa {
+  color: #00FF84;
+}
+
+#anpa:hover {
+  color: #FF9B92;
 }
 
 h1 {
@@ -99,74 +182,6 @@ summary:hover::before {
 details[open] summary::before {
   content: "o pini zz";
   font-family: 'nasin-nanpa';
-}
-
-#sewi {
-  height: 60px;
-  user-select: none;
-  border-bottom: 2px solid;
-  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
-}
-
-#itan {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-
-#itan div {
-  float: left;
-  width: 42px;
-  height: 42px;
-  border: solid white 3px;
-  border-radius: 50%;
-  background-image: url("/ijo/itan-lili.png");
-}
-
-#ante-toki-selo {
-  padding: 12px;
-  padding-right: 0;
-  float: right;
-}
-
-#ante-toki-selo label {
-  font-size: 1.36rem;
-  margin-top: -0.2rem;
-  margin-left: 5px;
-  float: right;
-}
-
-#ante-toki {
-  width: 100px;
-  height: 24px;
-  padding: 0;
-  padding-top: 2px;
-  padding-left: 10px;
-  text-align: center;
-  border: 0;
-  border-radius: 10px;
-  background-color: #656;
-  color: #EFE;
-}
-
-#ala {
-  margin-top: 8px;
-  font-family: 'nasin-nanpa';
-  font-size: 32px;
-  display: var(--ala);
-}
-
-#tawa {
-  display: inline-block;
-  animation: 2s ease-in 3s infinite alternate tawa;
-}
-
-#anpa {
-  color: #00FF84;
-}
-
-#anpa:hover {
-  color: #FF9B92;
 }
 
 body table {
@@ -251,18 +266,28 @@ body table th.en,td.en {
   font-family: Sans-serif;
 }
 
+.insa {
+  margin: auto;
+  text-align: center;
+}
+
 .teje {
   float: right;
 }
 
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: .5em;
+  margin-bottom: 0.5em;
   padding-left: 1rem;
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
 }
 
 .sp ul {
@@ -271,7 +296,7 @@ li {
 }
 
 .sp li {
-  margin-bottom: 1em;
+  margin-bottom: 0.1em;
 }
 
 .sp li:before {
