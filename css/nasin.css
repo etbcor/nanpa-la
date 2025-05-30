@@ -128,7 +128,7 @@ footer {
   animation: 2s ease-in 3s infinite alternate tawa;
 }
 
-#kule {
+.kule {
   color: #0F4;
   animation: 10s linear 0s infinite kule;
 }

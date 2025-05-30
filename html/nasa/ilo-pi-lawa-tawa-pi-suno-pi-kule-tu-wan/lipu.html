@@ -1,25 +1,55 @@
 <!--# include file="/ijo/head-lili.html" -->
 <body>
   <style>
-    html { background-color: #354; }
-    body > div {
+    @font-face {
+      font-family: 'nasin-nanpa';
+      src: url('/ijo/nasin-nanpa.otf');
+    }
+
+    html {
+      background-color: #354;
+      overflow: hidden;
+    }
+
+    #selo {
       margin: auto;
       margin-top: 25px;
       width: fit-content;
       border: 10px black solid;
-      border-radius: 50px;
-      background-color: #AF9;
+      border-radius: 100px;
+      background: #ABC;
+      box-shadow: black 6px 10px;
     }
-    body > div > div {
-      margin: 25px;
-      width: 100px;
-      height: 100px;
+
+    #selo::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 20px;
+      width: 200%;
+      z-index: -1;
       border: 10px black solid;
-      border-radius: 25px;
+      transform: translate(-50%, -50px);
+      background-image: linear-gradient(to bottom, #E98, #C75);
     }
-    #wan { background-color: #F00; }
-    #tu { background-color: #FF0; }
-    #tuwan { background-color: #0F0; }
+
+    #selo div {
+      margin: 20px;
+      width: 100px;
+      aspect-ratio: 1;
+      border: 10px black solid;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    #wan   { background: #F00; }
+    #tu    { background: #FF0; }
+    #tuwan { background: #0F0; }
+    #opona { background: #0FF;
+      font-family: "nasin-nanpa";
+      font-size: 45px;
+      padding-top: 50px;
+    }
   </style>
 
   <script src="/ijo/nasa.js"></script>
@@ -33,19 +63,26 @@
 
     ijo.style.scale = suliSin;
     ijo.style.marginTop = `${nanpa}px`;
+
     if (suliSin == 0) {
-      ijo.style.marginTop = `0px`;
+      ijo.style.display = "none";
       nanpaTawa++;
     }
+
     if (nanpaTawa > 2) {
-      nasa();
+      const oPona = document.getElementById("opona");
+      oPona.style.display = "block";
+      setTimeout(() => {
+        nasa();
+      }, 1000);
     }
   }
   </script>
 
-  <div id="selo">
+  <div id="selo" class="kule">
     <div id="wan" onclick="o('wan')"></div>
     <div id="tu" onclick="o('tu')"></div>
     <div id="tuwan" onclick="o('tuwan')"></div>
+    <div id="opona" class="nn" style="display: none"><span>opona</span></div>
   </div>
 </body>
