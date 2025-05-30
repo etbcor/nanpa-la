@@ -2,13 +2,22 @@
 <body
 onclick="nasa()"
 style="
-  background-size: 10%;
-  background-image: url('https://nanpa.la/ijo/ale-li-pona.gif');
-  background-position-x: center;
-  cursor: pointer;
   margin: 0;
   height: 100%;
+  cursor: pointer;
+  background-size: 30%;
+  animation: 30s linear 0s infinite t;
+  background-image: url('https://nanpa.la/ijo/ale-li-pona.gif');
 ">
-  <style>html { height: 100%; }</style>
+  <style>
+  @keyframes t {
+    0%  { background-position: 1000px 1000px;   }
+    25% { background-position: -1000px 1000px;  }
+    50% { background-position: -1000px -1000px; }
+    75% { background-position: 1000px -1000px;  }
+    100%{ background-position: 1000px 1000px;   }
+  }
+  html { height: 100%; }
+  </style>
   <script src="/ijo/nasa.js"></script>
 </body>
