@@ -1,58 +1,59 @@
 <!--# include file="/ijo/head-lili.html" -->
 <body>
+  <script src="/ijo/nasa.js"></script>
+
   <style>
-    @font-face {
-      font-family: 'nasin-nanpa';
-      src: url('/ijo/nasin-nanpa.otf');
-    }
+  @font-face {
+    font-family: 'nasin-nanpa';
+    src: url('/ijo/nasin-nanpa.otf');
+  }
 
-    html {
-      background-color: #354;
-      overflow: hidden;
-    }
+  html {
+    background-color: #354;
+    overflow: hidden;
+  }
 
-    #selo {
-      margin: auto;
-      margin-top: 25px;
-      width: fit-content;
-      border: 10px black solid;
-      border-radius: 100px;
-      background: #ABC;
-      box-shadow: black 6px 10px;
-    }
+  #selo {
+    margin: auto;
+    margin-top: 25px;
+    width: fit-content;
+    border: 10px black solid;
+    border-radius: 100px;
+    background: #ABC;
+    box-shadow: black 6px 10px;
+  }
 
-    #selo::after {
-      content: "";
-      display: block;
-      position: absolute;
-      height: 20px;
-      width: 200%;
-      z-index: -1;
-      border: 10px black solid;
-      transform: translate(-50%, -50px);
-      background-image: linear-gradient(to bottom, #E98, #C75);
-    }
+  #selo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 200%;
+    z-index: -1;
+    border: 10px black solid;
+    transform: translate(-50%, -50px);
+    background-image: linear-gradient(to bottom, #E98, #C75);
+  }
 
-    #selo div {
-      margin: 20px;
-      width: 100px;
-      aspect-ratio: 1;
-      border: 10px black solid;
-      border-radius: 100%;
-      cursor: pointer;
-    }
+  #selo div {
+    margin: 20px;
+    width: 100px;
+    aspect-ratio: 1;
+    border: 10px black solid;
+    border-radius: 100%;
+    cursor: pointer;
+  }
 
-    #wan   { background: #F00; }
-    #tu    { background: #FF0; }
-    #tuwan { background: #0F0; }
-    #opona { background: #0FF;
-      font-family: "nasin-nanpa";
-      font-size: 45px;
-      padding-top: 50px;
-    }
+  #wan   { background: #F00; }
+  #tu    { background: #FF0; }
+  #tuwan { background: #0F0; }
+  #opona { background: #0FF;
+    font-family: "nasin-nanpa";
+    font-size: 45px;
+    padding-top: 50px;
+  }
   </style>
 
-  <script src="/ijo/nasa.js"></script>
   <script>
   let nanpaTawa = 0;
   function o(nimi) {

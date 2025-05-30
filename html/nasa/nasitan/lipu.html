@@ -1,0 +1,75 @@
+<!--# include file="/ijo/head-lili.html" -->
+<body>
+  <script src="/ijo/nasa.js"></script>
+
+  <style>
+  @font-face {
+    font-family: 'nasin-nanpa';
+    src: url('/ijo/nasin-nanpa.otf');
+  }
+
+  html {
+    font-family: "nasin-nanpa";
+    text-align: center;
+  }
+
+  #ante {
+    opacity: 0;
+    font-size: 50px;
+    margin-top: -100px;
+    transition: 1s ease;
+    border-radius: 10px;
+    border: 5px solid black;
+    font-family: "nasin-nanpa";
+    text-decoration: spelling-error;
+  }
+
+  #ante:hover {
+    opacity: 1;
+  }
+
+  #sitelen {
+    font-size: 200px;
+    text-shadow: white 0 0 30px;
+  }
+  </style>
+
+  <script>
+  const nimi = ["a", "akesi", "ala", "alasa", "ale", "anpa", "ante", "anu", "awen", "e", "en", "esun", "ijo", "ike", "ilo", "insa", "jaki", "jan", "jelo", "jo", "kala", "kalama", "kama", "kasi", "ken", "kepeken", "kili", "kiwen", "ko", "kon", "kule", "kulupu", "kute", "la", "lape", "laso", "lawa", "len", "lete", "li", "lili", "linja", "lipu", "loje", "lon", "luka", "lukin", "lupa", "ma", "mama", "mani", "meli", "mi", "mije", "moku", "moli", "monsi", "mu", "mun", "musi", "mute", "nanpa", "nasa", "nasin", "nena", "ni", "nimi", "noka", "o", "olin", "ona", "open", "pakala", "pali", "palisa", "pan", "pana", "pi", "pilin", "pimeja", "pini", "pipi", "poka", "poki", "pona", "pu", "sama", "seli", "selo", "seme", "sewi", "sijelo", "sike", "sin", "sina", "sinpin", "sitelen", "sona", "soweli", "suli", "suno", "supa", "suwi", "tan", "taso", "tawa", "telo", "tenpo", "toki", "tomo", "tu", "unpa", "uta", "utala", "walo", "wan", "waso", "wawa", "weka", "wile", "namako", "kin", "oko", "kipisi", "leko", "monsuta", "tonsi", "jasima", "kijetesantakalu", "soko", "meso", "epiku", "kokosila", "lanpan", "n", "misikeke", "ku", "pake", "apeja", "majuna", "powe"];
+
+  function ante(n) {
+    const sitelen = document.getElementById("sitelen");
+    const ijo = new URL(window.location.href);
+
+    const kule = Math.floor(Math.random() * 360);
+    document.body.style.backgroundColor = `hsl(${kule}, 50%, 55%)`;
+
+    if (n) {
+      sitelen.innerHTML = n;
+    } else {
+      const nanpa = Math.floor(Math.random() * nimi.length);
+      const nn = nimi[nanpa];
+      sitelen.innerHTML = nn;
+      ijo.searchParams.set("s", nn);
+      window.history.replaceState(null, null, ijo);
+    }
+  }
+
+  function openLa() {
+    const ijo = new URL(window.location.href);
+    const sona = ijo.searchParams.get("s");
+
+    if (sona && nimi.includes(sona)) {
+      ante(sona);
+    } else {
+      ante();
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', openLa);
+  </script>
+
+  <div id="sitelen">
+  </div>
+  <button id="ante" onclick="ante()">oante</button>
+</body>

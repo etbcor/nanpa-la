@@ -15,8 +15,10 @@ function tanNasin(nimi) {
   const ilo = new URLSearchParams(window.location.search);
   const sona = ilo.get(nimi);
 
-  // pali
+  // o weka e "?t=..."
   window.history.pushState({}, document.title, window.location.pathname);
+
+  // o pana e sona
   return sona;
 }
 
