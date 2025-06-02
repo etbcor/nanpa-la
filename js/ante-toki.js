@@ -21,13 +21,13 @@ function tanNasin() {
   const s = sona.includes("s") ? "s" : "";
   const t = sona.includes("t") ? "t" : "";
   const e = sona.includes("e") ? "e" : "";
-  const pini = `${s}${t}${e}`;
+  const p = sona.includes("a") ? "a" : `${s}${t}${e}`;
 
   // o weka e "?t=..."
   window.history.pushState({}, document.title, window.location.pathname);
 
   // o pana e sona
-  return pini;
+  return p;
 }
 
 // o ante e nasin CSS

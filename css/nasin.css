@@ -37,6 +37,10 @@
   --sp: "none";
   --tp: "none";
   --en: "none";
+
+  --k-sp: #2F9;
+  --k-tp: #29F;
+  --k-en: #F92;
 }
 
 html {
@@ -64,14 +68,14 @@ footer {
   text-align: center;
   border-top: 2px solid;
   padding-top: 8px;
-  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
 }
 
 .sewi {
   height: 60px;
   user-select: none;
   border-bottom: 2px solid;
-  border-image: linear-gradient(to right, transparent 0%, #798 30%, #798 70%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
 }
 
 #itan {
@@ -193,8 +197,9 @@ body table {
 body table th {
   font-size: 1.2em;
   font-weight: bold;
-  text-align: left;
   padding-bottom: 1rem;
+  padding-left: 5px;
+  border-bottom: 2px solid;
 }
 
 body table th .teje {
@@ -202,37 +207,46 @@ body table th .teje {
   margin-right: 10px;
 }
 
+body table th.sp {
+  font-size: 2em;
+}
+
 body table td {
-  vertical-align: top;
+  vertical-align: middle;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-top: 1px solid;
+  padding-left: 2px;
+  border: 1px solid;
+  border-radius: 10px;
 }
 
 body table td.sp {
   padding-top: 0.5rem;
   padding-bottom: 0.1rem;
-  border-image: linear-gradient(to right, #20F277 0%, transparent 50%) 100% 1;
+  border-image: linear-gradient(to right, var(--k-sp) 0%, transparent 10%) 1;
 }
 
 body table td.tp {
-  border-image: linear-gradient(to right, #207792 0%, transparent 50%) 100% 1;
+  border-image: linear-gradient(to right, var(--k-tp) 0%, transparent 10%) 1;
 }
 
 body table td.en {
-  border-image: linear-gradient(to right, #779220 0%, transparent 50%) 100% 1;
+  border-image: linear-gradient(to right, var(--k-en) 0%, transparent 10%) 1;
 }
 
 body table th.sp,td.sp {
   width: 300px;
+  border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
 }
 
 body table th.tp,td.tp {
   width: 360px;
+  border-image: linear-gradient(to right, transparent 0%, var(--k-tp) 20%, var(--k-tp) 80%, transparent 100%) 100% 1;
 }
 
 body table th.en,td.en {
   width: 420px;
+  border-image: linear-gradient(to right, transparent 0%, var(--k-en) 20%, var(--k-en) 80%, transparent 100%) 100% 1;
 }
 
 .toki-ale th,td {
