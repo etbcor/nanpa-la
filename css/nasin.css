@@ -15,7 +15,7 @@
 @keyframes tawa {
   from {
     transform: translateY(0);
-    color: #FFF;
+    color: url(--walo);
   }
   to {
     transform: translateY(-32px);
@@ -41,6 +41,9 @@
   --k-sp: #2F9;
   --k-tp: #29F;
   --k-en: #F92;
+
+  --walo: #FFF;
+  --pimeja: #000;
 }
 
 html {
@@ -71,10 +74,25 @@ footer {
 }
 
 .sewi {
-  height: 60px;
-  user-select: none;
+  height: 50px;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
+}
+
+.sike-pona {
+  height: 25px;
+  display: flex;
+  user-select: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, transparent 10%, #789 40%, #789 60%, transparent 90%) 100% 1;
+  font-family: 'nasin-nanpa';
+  font-size: 130%;
+}
+
+.sike-pona a {
+  margin: auto;
 }
 
 #itan {
