@@ -59,8 +59,7 @@ body {
   margin-right: auto;
   border: 2px solid #798;
   border-radius: 16px;
-  padding: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   background-color: #323;
 }
 
@@ -87,23 +86,23 @@ footer {
 #itan div {
   float: left;
   width: 42px;
-  height: 42px;
-  border: solid white 3px;
+  aspect-ratio: 1;
   border-radius: 50%;
+  border: 1px dashed var(--k-sp);
   background-image: url("/ijo/itan-lili.png");
 }
 
 #ante-toki-selo {
+  float: right;
   padding: 12px;
   padding-right: 0;
-  float: right;
 }
 
 #ante-toki-selo label {
+  float: right;
   font-size: 1.36rem;
   margin-top: -0.2rem;
   margin-left: 5px;
-  float: right;
   animation: 60s ease-in-out 17s infinite sike;
 }
 
@@ -188,30 +187,26 @@ details[open] summary::before {
   font-family: 'nasin-nanpa';
 }
 
-body table {
+#sijelo {
   height: 100%;
   table-layout: fixed;
   padding-top: 10px;
 }
 
-body table th {
+#sijelo th {
   font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 1rem;
   padding-left: 5px;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
 }
 
-body table th .teje {
+#sijelo th .teje {
   text-decoration: underline;
   margin-right: 10px;
 }
 
-body table th.sp {
-  font-size: 2em;
-}
-
-body table td {
+#sijelo td {
   vertical-align: middle;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -220,34 +215,48 @@ body table td {
   border-radius: 10px;
 }
 
-body table td.sp {
-  padding-top: 0.5rem;
-  padding-bottom: 0.1rem;
-  border-image: linear-gradient(to right, var(--k-sp) 0%, transparent 10%) 1;
-}
-
-body table td.tp {
-  border-image: linear-gradient(to right, var(--k-tp) 0%, transparent 10%) 1;
-}
-
-body table td.en {
-  border-image: linear-gradient(to right, var(--k-en) 0%, transparent 10%) 1;
-}
-
-body table th.sp,td.sp {
+/*   sitelen pona   */
+#sijelo th.sp,td.sp {
   width: 300px;
+}
+/* header */
+#sijelo th.sp {
+  font-size: 2em;
   border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
 }
+/*   data   */
+#sijelo td.sp {
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  border-image: linear-gradient(to right, var(--k-sp) 0%, transparent 40px) 1;
+}
 
-body table th.tp,td.tp {
+/*   toki pona   */
+#sijelo th.tp,td.tp {
   width: 360px;
+}
+/*   header   */
+#sijelo th.tp {
   border-image: linear-gradient(to right, transparent 0%, var(--k-tp) 20%, var(--k-tp) 80%, transparent 100%) 100% 1;
 }
+/*   data   */
+#sijelo td.tp {
+  border-image: linear-gradient(to right, var(--k-tp) 0%, transparent 40px) 1;
+}
 
-body table th.en,td.en {
+/*   English   */
+#sijelo th.en,td.en {
   width: 420px;
+}
+/*   header   */
+#sijelo th.en {
   border-image: linear-gradient(to right, transparent 0%, var(--k-en) 20%, var(--k-en) 80%, transparent 100%) 100% 1;
 }
+/*   data   */
+#sijelo td.en {
+  border-image: linear-gradient(to right, var(--k-en) 0%, transparent 40px) 1;
+}
+
 
 .toki-ale th,td {
   width: 600px;
