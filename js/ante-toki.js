@@ -1,25 +1,33 @@
 // o awen e sona lon poki ilo pi jan lukin
-function tawaPoki(nimi, sona) {
-  document.cookie = `${nimi}=${sona}; domain=.nanpa.la; path=/`;
+function tawaPoki(toki) {
+  document.cookie = `t=${toki}; domain=.nanpa.la; path=/`;
 }
 
 // o alasa e sona lon poki ilo pi jan lukin
-function tanPoki(nimi) {
-  return document.cookie.split("; ").find((row) => row.startsWith(`${nimi}=`))?.split("=")[1];
+function tanPoki() {
+  return document.cookie.split("; ").find((row) => row.startsWith("t="))?.split("=")[1];
 }
 
 // o alasa e sona lon nasin pi lipu ilo
-function tanNasin(nimi) {
+function tanNasin() {
 
   // ijo
   const ilo = new URLSearchParams(window.location.search);
-  const sona = ilo.get(nimi);
+  const sona = ilo.get("t");
+  if (!sona)
+    return;
+
+  // o alasa e sona
+  const s = sona.includes("s") ? "s" : "";
+  const t = sona.includes("t") ? "t" : "";
+  const e = sona.includes("e") ? "e" : "";
+  const pini = `${s}${t}${e}`;
 
   // o weka e "?t=..."
   window.history.pushState({}, document.title, window.location.pathname);
 
   // o pana e sona
-  return sona;
+  return pini;
 }
 
 // o ante e nasin CSS
@@ -65,8 +73,8 @@ function openLa() {
   // ijo
   const ilo = document.getElementById('ante-toki');
   const anpa = document.getElementById('anpa');
-  const nasin = tanNasin("t");
-  const poki = tanPoki("t");
+  const nasin = tanNasin();
+  const poki = tanPoki();
   let toki = "a";
 
   // pali
@@ -76,14 +84,14 @@ function openLa() {
     // ..o awen e toki sin
     toki = this.value;
     // ..lon poki kin
-    tawaPoki("t", toki);
+    tawaPoki(toki);
     // o ante lukin
     oAnteLukin(toki);
   });
 
   if (nasin) {
-    toki = nasin.split('').sort().join('');
-    tawaPoki("t", toki);
+    toki = nasin;
+    tawaPoki(toki);
     ilo.value = toki;
 
   } else if (poki) {
@@ -91,7 +99,7 @@ function openLa() {
     ilo.value = toki;
 
   } else {
-    tawaPoki("t", toki);
+    tawaPoki(toki);
   }
   oAnteLukin(toki);
 }
