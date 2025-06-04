@@ -4,22 +4,28 @@
 }
 
 @keyframes kule {
-    from {
-      filter: hue-rotate(0deg);
-    }
-    to {
-      filter: hue-rotate(360deg);
-    }
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(360deg); }
   }
 
-@keyframes tawa {
-  from {
+@keyframes kama-lili {
+  0%   { transform: scaleY(100%); }
+  97%  { transform: scaleY(100%); }
+  100% { transform: scaleY(0%); }
+}
+
+@keyframes tawa-sewi {
+  0% {
     transform: translateY(0);
     color: url(--walo);
   }
-  to {
-    transform: translateY(-32px);
-    color: #0F4;
+  50% {
+    transform: translateY(0);
+    color: url(--walo);
+  }
+  100% {
+    transform: translateY(-24px);
+    color: var(--jelo);
   }
 }
 
@@ -44,6 +50,8 @@
 
   --walo: #FFF;
   --pimeja: #000;
+  --laso: #2E5;
+  --jelo: #EE2;
 }
 
 html {
@@ -89,6 +97,8 @@ footer {
   border-image: linear-gradient(to right, transparent 10%, #789 40%, #789 60%, transparent 90%) 100% 1;
   font-family: 'nasin-nanpa';
   font-size: 130%;
+  max-width: 300px;
+  margin: auto;
 }
 
 .sike-pona a {
@@ -144,9 +154,14 @@ footer {
   display: var(--ala);
 }
 
-#tawa {
+#kama-lili {
   display: inline-block;
-  animation: 2s ease-in 3s infinite alternate tawa;
+  animation: 5s ease-in 10s infinite alternate kama-lili;
+}
+
+#tawa-sewi {
+  display: inline-block;
+  animation: 4s ease-in 3s infinite alternate tawa-sewi;
 }
 
 .kule {
@@ -186,7 +201,6 @@ details {
 summary {
   cursor: pointer;
   list-style: none;
-  color: #00FF84;
 }
 
 summary::before {
@@ -216,6 +230,7 @@ details[open] summary::before {
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid;
+	text-shadow: -10px 10px 10px black;
 }
 
 #sijelo th .teje {
@@ -239,6 +254,7 @@ details[open] summary::before {
 /* header */
 #sijelo th.sp {
   font-size: 2em;
+  color: var(--k-sp);
   border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
@@ -254,6 +270,7 @@ details[open] summary::before {
 }
 /*   header   */
 #sijelo th.tp {
+  color: var(--k-tp);
   border-image: linear-gradient(to right, transparent 0%, var(--k-tp) 20%, var(--k-tp) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
@@ -267,6 +284,7 @@ details[open] summary::before {
 }
 /*   header   */
 #sijelo th.en {
+  color: var(--k-en);
   border-image: linear-gradient(to right, transparent 0%, var(--k-en) 20%, var(--k-en) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
