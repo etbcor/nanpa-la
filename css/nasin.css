@@ -16,15 +16,15 @@
 
 @keyframes tawa-sewi {
   0% {
-    transform: translateY(0);
+    transform: translate(0, 0);
     color: url(--walo);
   }
   50% {
-    transform: translateY(0);
+    transform: translate(0, 0);
     color: url(--walo);
   }
   100% {
-    transform: translateY(-24px);
+    transform: translate(0, -18px);
     color: var(--jelo);
   }
 }
@@ -41,12 +41,12 @@
 :root {
   --ala: "flex";
   --sp: "none";
-  --tp: "none";
-  --en: "none";
+  --sl: "none";
+  --ti: "none";
 
   --k-sp: #2F9;
-  --k-tp: #29F;
-  --k-en: #F92;
+  --k-sl: #29F;
+  --k-ti: #F92;
 
   --walo: #FFF;
   --pimeja: #000;
@@ -82,7 +82,9 @@ footer {
 }
 
 .sewi {
-  height: 50px;
+  min-width: 300px;
+  width: 100%;
+  display: inline-grid;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
 }
@@ -106,13 +108,11 @@ footer {
 }
 
 #itan {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
+  margin-bottom: 10px;
 }
 
 #itan div {
-  float: left;
+  margin: auto;
   width: 42px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -121,18 +121,18 @@ footer {
 }
 
 #ante-toki-selo {
-  float: right;
-  padding: 12px;
-  padding-right: 0;
+  display: flex;
+  margin: auto;
 }
 
-#ante-toki-selo label {
-  float: right;
-  font-size: 1.36rem;
-  margin-top: -0.2rem;
-  margin-left: 5px;
-  animation: 60s ease-in-out 17s infinite sike;
+#ante-toki-selo input {
+  margin-left: 8px;
+  margin-right: -4px;
 }
+
+.osp { color: var(--k-sp) }
+.osl { color: var(--k-sl) }
+.oti { color: var(--k-ti) }
 
 #ante-toki {
   width: 100px;
@@ -264,32 +264,32 @@ details[open] summary::before {
   border-image: linear-gradient(to right, var(--k-sp) 0%, transparent 40px) 1;
 }
 
-/*   toki pona   */
-#sijelo th.tp,td.tp {
+/*   sitelen Lasina   */
+#sijelo th.sl,td.sl {
   width: 360px;
 }
 /*   header   */
-#sijelo th.tp {
-  color: var(--k-tp);
-  border-image: linear-gradient(to right, transparent 0%, var(--k-tp) 20%, var(--k-tp) 80%, transparent 100%) 100% 1;
+#sijelo th.sl {
+  color: var(--k-sl);
+  border-image: linear-gradient(to right, transparent 0%, var(--k-sl) 20%, var(--k-sl) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
-#sijelo td.tp {
-  border-image: linear-gradient(to right, var(--k-tp) 0%, transparent 40px) 1;
+#sijelo td.sl {
+  border-image: linear-gradient(to right, var(--k-sl) 0%, transparent 40px) 1;
 }
 
 /*   English   */
-#sijelo th.en,td.en {
+#sijelo th.ti,td.ti {
   width: 420px;
 }
 /*   header   */
-#sijelo th.en {
-  color: var(--k-en);
-  border-image: linear-gradient(to right, transparent 0%, var(--k-en) 20%, var(--k-en) 80%, transparent 100%) 100% 1;
+#sijelo th.ti {
+  color: var(--k-ti);
+  border-image: linear-gradient(to right, transparent 0%, var(--k-ti) 20%, var(--k-ti) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
-#sijelo td.en {
-  border-image: linear-gradient(to right, var(--k-en) 0%, transparent 40px) 1;
+#sijelo td.ti {
+  border-image: linear-gradient(to right, var(--k-ti) 0%, transparent 40px) 1;
 }
 
 
@@ -303,12 +303,12 @@ details[open] summary::before {
   font-size: 160%;
 }
 
-.tp {
-  display: var(--tp);
+.sl {
+  display: var(--sl);
 }
 
-.en {
-  display: var(--en);
+.ti {
+  display: var(--ti);
 }
 
 .nn {
