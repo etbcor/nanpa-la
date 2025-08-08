@@ -46,7 +46,8 @@ function oAnteLukin(toki) {
   s.setProperty("--sp", o(toki, "p"));
   s.setProperty("--sl", o(toki, "l"));
   s.setProperty("--ti", o(toki, "i"));
-  anpa.setAttribute("href", `https://${poka}nanpa.la${lipu}?t=${toki}`);
+  const t = toki ? `?t=${toki}` : '';
+  anpa.setAttribute("href", `https://${poka}nanpa.la${lipu}${t}`);
 
   if (toki.includes("a")) {
     anpa.parentElement.style.setProperty("display", "none");
