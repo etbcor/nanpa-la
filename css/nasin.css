@@ -38,6 +38,15 @@
   }
 }
 
+@keyframes toki-tawa {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 :root {
   --ala: "flex";
   --sp: "none";
@@ -178,6 +187,93 @@ footer {
   animation: 10s linear 0s infinite kule;
 }
 
+.toki-tawa-selo {
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.toki-tawa {
+  padding-left: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  box-sizing: content-box;
+  font-family: 'nasin-nanpa';
+  animation: 180s linear 0s infinite toki-tawa;
+}
+
+.album {
+  margin: 4px;
+  padding: 4px;
+  display: flex;
+  font-size: 10pt;
+  border-radius: 6.5px;
+  border: 1px dashed #798;
+  background-color: #655;
+}
+
+.album img {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  background-color: #000;
+  border: 3px solid black;
+}
+
+.album div {
+  flex: 1;
+  margin: auto 0.5em auto 0.5em;
+}
+
+.album div p:first-of-type {
+  font-size: 14pt;
+  font-weight: bold;
+  color: var(--k-sp);
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--k-ti) 0%, transparent 150px) 1;
+}
+
+.album div details {
+  margin-bottom: 0.5em;
+}
+
+.album div details > summary {
+  margin-left: 1em;
+  list-style: disclosure-closed;
+}
+
+.album div details > summary::before {
+}
+
+.album div details[open] > summary {
+  list-style: disclosure-open;
+}
+
+.album div ol {
+  margin-top: 0.2em;
+  padding-left: 2em;
+}
+
+.album div ul {
+  margin-top: 0.2em;
+  padding-left: 2em;
+}
+
+.album div ol span {
+  color: var(--k-sp);
+}
+
+.album a {
+  
+}
+
+.nimi-ale {
+  width: 16em;
+  font-size: 2em;
+  line-height: 1em;
+  font-family: 'nasin-nanpa';
+}
+
 #anpa {
   color: #00FF84;
 }
@@ -212,18 +308,18 @@ summary {
   list-style: none;
 }
 
-summary::before {
+#sijelo summary:hover,
+#sijelo summary:hover::before {
+  color: #FF9B92;
+}
+
+#sijelo summary::before {
   content: "o open zz";
   font-family: 'nasin-nanpa';
   color: #0F4;
 }
 
-summary:hover,
-summary:hover::before {
-  color: #FF9B92;
-}
-
-details[open] summary::before {
+#sijelo details[open] summary::before {
   content: "o pini zz";
   font-family: 'nasin-nanpa';
 }
@@ -265,6 +361,19 @@ details[open] summary::before {
 #sijelo th.sp {
   font-size: 2em;
   color: var(--k-sp);
+  border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
+}
+.sp-header {
+	margin: auto;
+  color: var(--k-sp);
+  font-size: 2em;
+  font-family: 'nasin-nanpa';
+	text-align: center;
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid;
+	text-shadow: -10px 10px 10px black;
   border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
