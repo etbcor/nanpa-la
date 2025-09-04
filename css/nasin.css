@@ -211,6 +211,10 @@ footer {
   background-color: #655;
 }
 
+.album b {
+  float: right;
+}
+
 .album img {
   width: 100px;
   height: 100px;
@@ -234,7 +238,7 @@ footer {
 }
 
 .album div details {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
 }
 
 .album div details > summary {
