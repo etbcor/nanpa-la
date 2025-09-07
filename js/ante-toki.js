@@ -80,7 +80,7 @@ function openLa() {
   const anpa = document.getElementById('anpa');
   const nasin = tanNasin();
   const poki = tanPoki();
-  let toki = '';
+  let toki = 'p';
 
   // pali
   for (const w of a) {
@@ -92,22 +92,14 @@ function openLa() {
     });
   }
 
-  if (nasin) {
-    toki = nasin;
-    tawaPoki(toki);
-    p.checked = toki.includes('p');
-    l.checked = toki.includes('l');
-    i.checked = toki.includes('i');
+  if      (nasin) { toki = nasin; tawaPoki(toki); }
+  else if (poki)  { toki = poki;                  }
+  else            {               tawaPoki(toki); }
 
-  } else if (poki) {
-    toki = poki;
-    p.checked = toki.includes('p');
-    l.checked = toki.includes('l');
-    i.checked = toki.includes('i');
+  p.checked = toki.includes('p');
+  l.checked = toki.includes('l');
+  i.checked = toki.includes('i');
 
-  } else {
-    tawaPoki(toki);
-  }
   oAnteLukin(toki);
 }
 
