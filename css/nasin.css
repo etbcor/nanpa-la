@@ -253,17 +253,17 @@ footer {
   list-style: disclosure-open;
 }
 
-.album div ol {
+.album ol {
   margin-top: 0.2em;
   padding-left: 2em;
 }
 
-.album div ul {
+.album ul {
   margin-top: 0.2em;
   padding-left: 2em;
 }
 
-.album div ol span {
+.album ol span {
   color: var(--k-sp);
 }
 
