@@ -57,19 +57,26 @@
   --k-sl: #29F;
   --k-ti: #F92;
 
-  --walo: #FFF;
+  --walo: #EFE;
   --pimeja: #000;
   --laso: #2E5;
   --jelo: #EE2;
+
+  --bg: #122;
+  --body-bg: #323;
+  --link: #0F4;
+  --hover: #F99;
+  --border: #798;
+  --border2: #789;
 }
 
 html {
-  background-color: #354;
-  font-family: Sans-serif;
-  color: #EFE;
   padding: 10px;
   padding-left: 11px;
   padding-right: 11px;
+  font-family: Sans-serif;
+  color: var(--walo);
+  background-color: var(--bg);
 }
 
 body {
@@ -78,17 +85,17 @@ body {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid #798;
   border-radius: 16px;
   position: relative;
-  background-color: #323;
+  background-color: var(--body-bg);
+  border: 2px solid var(--border);
 }
 
 footer {
   text-align: center;
   border-top: 2px solid;
   padding-top: 8px;
-  border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%) 100% 1;
 }
 
 #tan {
@@ -104,7 +111,7 @@ footer {
   width: 100%;
   display: inline-grid;
   border-bottom: 2px solid;
-  border-image: linear-gradient(to right, transparent 0%, #798 20%, #798 80%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%) 100% 1;
 }
 
 #sike-pona {
@@ -112,9 +119,8 @@ footer {
   display: flex;
   user-select: none;
   padding: 4px 0;
-  border-top: 1px solid;
   border-bottom: 1px solid;
-  border-image: linear-gradient(to right, transparent 0%, #789 45%, #789 55%, transparent 100%) 100% 1;
+  border-image: linear-gradient(to right, transparent 0%, var(--border) 45%, var(--border) 55%, transparent 100%) 100% 1;
   font-family: 'nasin-nanpa';
   font-size: 130%;
   max-width: 150px;
@@ -162,7 +168,7 @@ footer {
   border: 0;
   border-radius: 10px;
   background-color: #656;
-  color: #EFE;
+  color: var(--walo);
 }
 
 #ala {
@@ -197,7 +203,6 @@ footer {
   white-space: nowrap;
   display: inline-block;
   box-sizing: content-box;
-  font-family: 'nasin-nanpa';
   animation: 180s linear 0s infinite toki-tawa;
 }
 
@@ -207,7 +212,7 @@ footer {
   display: flex;
   font-size: 10pt;
   border-radius: 6.5px;
-  border: 1px dashed #798;
+  border: 1px dashed var(--border);
   background-color: #655;
 }
 
@@ -219,8 +224,8 @@ footer {
   width: 100px;
   height: 100px;
   border-radius: 3px;
-  background-color: #000;
-  border: 3px solid black;
+  background-color: var(--pimeja);
+  border: 3px solid var(--pimeja);
 }
 
 .album div {
@@ -271,11 +276,51 @@ footer {
   
 }
 
-.nimi-ale {
+.leko-nimi {
+  font-family: 'nasin-nanpa';
+}
+
+table.leko-nimi {
+  font-size: 2em;
+  border-collapse: collapse;
+}
+
+table.leko-nimi td {
+  width: 1rem;
+  height: 1rem;
+  padding: 2px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid var(--pimeja);
+}
+
+table.leko-nimi td > span {
+  left: 0;
+  bottom: 0;
+  opacity: 0%;
+  height: 1em;
+  padding: 2px;
+  z-index: 100;
+  font-size: 0.4em;
+  transition: 0.2s;
+  position: absolute;
+  background-color: var(--bg);
+  border: 1px solid var(--pimeja);
+  border-left: 0px;
+  border-top-right-radius: 3px;
+  font-feature-settings: "liga" off;
+}
+
+table.leko-nimi td:hover > span {
+  opacity: 95%;
+}
+
+table.leko-nimi 
+
+div.toki-tawa a.leko-nimi {
   width: 16em;
   font-size: 2em;
   line-height: 1em;
-  font-family: 'nasin-nanpa';
 }
 
 #anpa {
@@ -283,7 +328,7 @@ footer {
 }
 
 #anpa:hover {
-  color: #FF9B92;
+  color: var(--hover);
 }
 
 h1 {
@@ -292,7 +337,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #0F4;
+  color: var(--link);
 }
 
 a:visited {
@@ -309,6 +354,9 @@ details {
 
 summary {
   cursor: pointer;
+}
+
+#sijelo summary {
   list-style: none;
 }
 
@@ -340,7 +388,7 @@ summary {
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid;
-	text-shadow: -10px 10px 10px black;
+	text-shadow: -10px 10px 10px var(--pimeja);
 }
 
 #sijelo th .teje {
@@ -377,7 +425,7 @@ summary {
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid;
-	text-shadow: -10px 10px 10px black;
+	text-shadow: -10px 10px 10px var(--pimeja);
   border-image: linear-gradient(to right, transparent 0%, var(--k-sp) 20%, var(--k-sp) 80%, transparent 100%) 100% 1;
 }
 /*   data   */
